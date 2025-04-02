@@ -1,0 +1,55 @@
+# Project: SportsSystem
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Agent.o Association.o Club.o User.o Athlete.o Coach.o Sponsor.o Admin.o Global.o
+LINKOBJ  = main.o Agent.o Association.o Club.o User.o Athlete.o Coach.o Sponsor.o Admin.o Global.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = SportsSystem.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Agent.o: Agent.cpp
+	$(CPP) -c Agent.cpp -o Agent.o $(CXXFLAGS)
+
+Association.o: Association.cpp
+	$(CPP) -c Association.cpp -o Association.o $(CXXFLAGS)
+
+Club.o: Club.cpp
+	$(CPP) -c Club.cpp -o Club.o $(CXXFLAGS)
+
+User.o: User.cpp
+	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
+
+Athlete.o: Athlete.cpp
+	$(CPP) -c Athlete.cpp -o Athlete.o $(CXXFLAGS)
+
+Coach.o: Coach.cpp
+	$(CPP) -c Coach.cpp -o Coach.o $(CXXFLAGS)
+
+Sponsor.o: Sponsor.cpp
+	$(CPP) -c Sponsor.cpp -o Sponsor.o $(CXXFLAGS)
+
+Admin.o: Admin.cpp
+	$(CPP) -c Admin.cpp -o Admin.o $(CXXFLAGS)
+
+Global.o: Global.cpp
+	$(CPP) -c Global.cpp -o Global.o $(CXXFLAGS)
