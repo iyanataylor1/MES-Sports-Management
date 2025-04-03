@@ -1,8 +1,6 @@
 # MES-Sports-Management
 OOP group assignment
 
-!! There's a problem with one of the files. I'll upload the doc and app for now; figure out the problem
-
 Instructions:
 This group project is designed to allow students working in groups to employ key OOP concepts 
 in the analysis, design, and implementation of a real-world application. Students in groups 
